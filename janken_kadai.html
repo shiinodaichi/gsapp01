@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="sample.css">
+<title>じゃんけん</title>
+<script>
+$(document).ready(function(){
+//ここにJSを記述
+var i = Math.floor(Math.random()*3+1);
+  console.log(i);
+
+
+$("#gu_btn").on("click",function r (){  //COMの手
+    
+if(i==1){
+    console.log("グー");
+    $("#pc").html("グー");
+    $("#num").html("あいこ");
+    
+};
+    if(i==2){
+        console.log("チョキ");
+        $("#pc").html("チョキ");
+        $("#num").alert("勝ち")
+        $("#num").html("勝ち");
+    }
+    if(i==3){
+        console.log("パー");
+        $("#pc").html("パー");
+        $("#num").html("負け！！！・・・ざわ・・・ざわ・・");
+    }
+
+for(var i =1; a<=3;i++){
+    document.write("hello");}
+
+});
+
+$("#cho_btn").on("click",function r(){ //COMの手
+    if(i==1){
+        console.log("グー");
+        $("#pc").html("グー");
+        $("#num").html("負け");
+}
+    if(i==2){
+        console.log("チョキ");
+        $("#pc").html("チョキ");
+        $("#num").html("あいこ");
+    }
+    if(i==3){
+        console.log("パー");
+        $("#pc").html("パー");
+        $("#num").html("勝利");
+    }
+});
+
+$("#par_btn").on("click",function r(){ //COMの手
+    if(i==1){
+        console.log("グー");
+        $("#pc").html("グー");
+        $("#num").html("勝ち");
+}
+    if(i==2){
+        console.log("チョキ");
+        $("#pc").html("チョキ");
+        $("#num").html("負け");
+    }
+    if(i==3){
+        console.log("パー");
+        $("#pc").html("パー");
+        $("#num").html("あいこ");
+    }
+});
+    
+$("#pc").on("click",function r(){
+  console.log(i);
+}
+
+)}
+)
+</script>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+    <h2>手を選んでください！</h2>
+  <ul>
+    <li id="gu_btn">グー</li>
+    <li id="cho_btn">チョキ</li>
+    <li id="par_btn">パー</li>
+  </ul>
+  <div id="pc">コンピュータの出した手は？</div>
+  <div id="num">ここに表示されます</div>
+</main>
+
+<footer></footer>
+
+</body>
+</html>
